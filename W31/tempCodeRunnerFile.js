@@ -1,1 +1,0 @@
-const [N, cards, M, query] = require('fs').readFileSync('js_testcase.txt').toString().trim().split("\n");

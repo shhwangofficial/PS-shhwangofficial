@@ -23,16 +23,5 @@ import itertools
 nCr = list(itertools.combinations(num_list, 3))
 # -> [(), (), ...]
 
-# 2차원 행렬 만들기
-import sys
-N = int(sys.stdin.readline())
-mat = []
-for _ in range(N):
-    r = sys.stdin.readline()
-    tmp = []
-    for j in range(N):
-        tmp.append(int(r[j])) # input에 따라 조절 필요
-    mat.append(tmp)
-
 import copy
 b = copy.deepcopy(a)

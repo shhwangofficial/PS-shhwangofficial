@@ -8,7 +8,6 @@ for _ in range(N):
 
 
 def solve(lst):
-
     for i in range(1, len(lst)):
         for j in range(3):
             set_ = list({0, 1, 2} - {j})

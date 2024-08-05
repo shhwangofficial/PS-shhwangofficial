@@ -1,14 +1,16 @@
-import sys, heapq
+import heapq
+import sys
+
 N = int(sys.stdin.readline())
 M = int(sys.stdin.readline())
 
-graph = [[] for i in range(N+1)]
+graph = [[] for i in range(N + 1)]
 for i in range(M):
-    a, b, c = map(int,sys.stdin.readline().split())
+    a, b, c = map(int, sys.stdin.readline().split())
     graph[a].append([b, c])
     graph[b].append([a, c])
 
-connected = [0 for i in range(N+1)]  # 트리에 포함되었는지 확인하는 배열
+connected = [0 for i in range(N + 1)]  # 트리에 포함되었는지 확인하는 배열
 
 heap = [[0, 1]]  # 아무 노드로 시작해도 됨
 

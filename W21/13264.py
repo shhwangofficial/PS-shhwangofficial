@@ -1,15 +1,16 @@
 import sys
 
+
 def manber_myers(s):
     n = len(s)
     suffix_array = list(range(n))
     rank = [ord(c) for c in s]
     k = 1
-    
+
     while k < n:
         key = [(rank[i], rank[i + k] if i + k < n else -1) for i in range(n)]
         suffix_array.sort(key=lambda x: (key[x]))
-        
+
         temp_rank = [0] * n
         for i in range(1, n):
             temp_rank[suffix_array[i]] = temp_rank[suffix_array[i - 1]]
@@ -17,7 +18,7 @@ def manber_myers(s):
                 temp_rank[suffix_array[i]] += 1
         rank = temp_rank
         k *= 2
-        
+
     return suffix_array
 
 

@@ -1,5 +1,5 @@
-
 import sys
+
 N = int(sys.stdin.readline())
 
 nums = []
@@ -12,10 +12,9 @@ for _ in range(N):
     dic[temp] += 1
 
 
-
-print(int(round(sum(nums)/N)))
+print(int(round(sum(nums) / N)))
 nums.sort()
-print(nums[(len(nums)-1)//2])
+print(nums[(len(nums) - 1) // 2])
 max_ = 0
 i = 0
 temp = []
@@ -31,4 +30,4 @@ if len(temp) > 1:
     print(temp[1])
 else:
     print(i)
-print(nums[-1]- nums[0])
+print(nums[-1] - nums[0])

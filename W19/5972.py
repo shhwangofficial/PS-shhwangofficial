@@ -1,11 +1,13 @@
-import sys, heapq
-N, M = map(int,sys.stdin.readline().split())
-graph = [[] for _ in range(N+1)]
+import heapq
+import sys
+
+N, M = map(int, sys.stdin.readline().split())
+graph = [[] for _ in range(N + 1)]
 inf = int(10**9)
-min_distance = [inf for _ in range(N+1)]
+min_distance = [inf for _ in range(N + 1)]
 
 for i in range(M):
-    a, b, c = map(int,sys.stdin.readline().split())
+    a, b, c = map(int, sys.stdin.readline().split())
     graph[a].append([b, c])
     graph[b].append([a, c])
 

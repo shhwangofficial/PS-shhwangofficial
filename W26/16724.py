@@ -1,5 +1,6 @@
 import sys
-row, col = map(int,sys.stdin.readline().split())
+
+row, col = map(int, sys.stdin.readline().split())
 board = []
 for _ in range(row):
     board.append(list(map(str, sys.stdin.readline().rstrip())))

@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 mat = []
 for i in range(N):
@@ -9,7 +10,7 @@ from itertools import combinations
 set_full = set(range(N))
 
 min_ = 999999
-for combination in combinations(range(N), N//2):
+for combination in combinations(range(N), N // 2):
     set_A = set(combination)
     set_B = set_full - set_A
     score = 0

@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 nums = []
 for i in range(N):
@@ -8,9 +9,9 @@ stack = []
 cnt = 0
 for i in nums:
     if not stack:
-        stack.append([i,1])
+        stack.append([i, 1])
     elif stack[-1][0] > i:
-        stack.append([i,1])
+        stack.append([i, 1])
         cnt += 1
     elif stack[-1][0] == i:
         cnt += stack[-1][1]
@@ -21,9 +22,9 @@ for i in nums:
         while stack and stack[-1][0] < i:
             cnt += stack.pop()[1]
         if not stack:
-            stack.append([i,1])
+            stack.append([i, 1])
         elif stack[-1][0] > i:
-            stack.append([i,1])
+            stack.append([i, 1])
             cnt += 1
         elif stack[-1][0] == i:
             cnt += stack[-1][1]

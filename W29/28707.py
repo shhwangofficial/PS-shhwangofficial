@@ -1,5 +1,7 @@
-import sys, heapq
+import heapq
+import sys
 from itertools import permutations
+
 N = int(sys.stdin.readline())
 A = list(map(int, sys.stdin.readline().split()))
 A_sort = tuple(sorted(A))
@@ -21,18 +23,17 @@ for _ in range(M):
 while heap:
     now = heapq.heappop(heap)[1]
     if now == A_sort:
-        
+
         break
     for command in commands:
         then = list(now)
-        then[command[0]-1], then[command[1]-1] = then[command[1]-1], then[command[0]-1]
+        then[command[0] - 1], then[command[1] - 1] = (
+            then[command[1] - 1],
+            then[command[0] - 1],
+        )
         then = tuple(then)
         if mydict[then] == -1 or mydict[then] > mydict[now] + command[2]:
             mydict[then] = mydict[now] + command[2]
             heapq.heappush(heap, [mydict[then], then])
 
 print(mydict[A_sort])
-
-
-
-        

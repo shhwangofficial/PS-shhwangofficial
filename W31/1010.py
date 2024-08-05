@@ -1,5 +1,7 @@
 import sys
+
 T = int(sys.stdin.readline())
+
 
 def factorial(N, M):
     ans = 1
@@ -13,6 +15,7 @@ def factorial(N, M):
         N -= 1
     return ans
 
+
 for _ in range(T):
-    N, M = map(int,sys.stdin.readline().split())
+    N, M = map(int, sys.stdin.readline().split())
     print(factorial(N, M))

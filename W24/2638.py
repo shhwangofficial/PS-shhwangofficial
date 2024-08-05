@@ -1,6 +1,7 @@
 import sys
 from collections import deque
-row_max, col_max = map(int,sys.stdin.readline().split())
+
+row_max, col_max = map(int, sys.stdin.readline().split())
 graph = []
 
 for _ in range(row_max):
@@ -9,7 +10,7 @@ dy = [-1, 0, 1, 0]
 dx = [0, 1, 0, -1]
 time = 0
 while True:
-    visited = [[0]* col_max for i in range(row_max)]
+    visited = [[0] * col_max for i in range(row_max)]
     queue = deque([(0, 0)])
     visited[0][0] = 1
     while queue:
@@ -17,7 +18,7 @@ while True:
         for i in range(4):
             new_x = now[0] + dx[i]
             new_y = now[1] + dy[i]
-            if 0<=new_x<row_max and 0<=new_y<col_max:
+            if 0 <= new_x < row_max and 0 <= new_y < col_max:
                 if graph[new_x][new_y] == 0:
                     if visited[new_x][new_y] == 0:
                         visited[new_x][new_y] += 1

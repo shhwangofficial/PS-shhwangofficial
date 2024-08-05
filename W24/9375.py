@@ -1,4 +1,5 @@
 import sys
+
 T = int(sys.stdin.readline())
 for _ in range(T):
     my_dict = {}
@@ -10,6 +11,5 @@ for _ in range(T):
         my_dict[num[1]] += 1
     i = 1
     for j in my_dict.keys():
-        i *= (my_dict[j]+1)
-    print(i-1)
-    
+        i *= my_dict[j] + 1
+    print(i - 1)

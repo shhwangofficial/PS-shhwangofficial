@@ -1,8 +1,10 @@
 import sys
+
 G = int(sys.stdin.readline())
 P = int(sys.stdin.readline())
 
-p = [i for i in range(G+1)]
+p = [i for i in range(G + 1)]
+
 
 def doit(num):
     temp = num
@@ -13,6 +15,7 @@ def doit(num):
     p[temp] -= 1
     p[num] = p[temp]
 
+
 cnt = 0
 for _ in range(P):
     gi = int(sys.stdin.readline())
@@ -20,6 +23,6 @@ for _ in range(P):
         break
     else:
         cnt += 1
-   
+
 
 print(cnt)

@@ -1,4 +1,5 @@
-import sys, heapq
+import heapq
+import sys
 
 N, K = map(int, sys.stdin.readline().split())
 gems = []
@@ -9,16 +10,16 @@ bags = []
 for _ in range(K):
     bags.append(int(sys.stdin.readline()))
 
-gems.sort() 
-bags.sort() 
+gems.sort()
+bags.sort()
 
-result = 0 
-tmp = [] 
- 
+result = 0
+tmp = []
+
 for bag in bags:
-    while gems and gems[0][0] <= bag: 
+    while gems and gems[0][0] <= bag:
         heapq.heappush(tmp, -gems[0][1])
         heapq.heappop(gems)
-    if tmp: 
+    if tmp:
         result -= heapq.heappop(tmp)
 print(result)

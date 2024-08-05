@@ -1,5 +1,6 @@
 import sys
-a, b = map(int,sys.stdin.readline().split())
+
+a, b = map(int, sys.stdin.readline().split())
 lst = []
 for i in range(a):
     lst.append(list(map(int, sys.stdin.readline().split())))
@@ -10,4 +11,4 @@ for i in range(a):
         if lst[i][j] == 1:
             result.append([i, j])
 
-print(abs(result[0][0]-result[1][0]) + abs(result[0][1]-result[1][1]))
+print(abs(result[0][0] - result[1][0]) + abs(result[0][1] - result[1][1]))

@@ -1,6 +1,8 @@
 import sys
+
 N = int(sys.stdin.readline())
 dict1 = {}
+
 
 def add(dic, arr):
     if arr == []:
@@ -13,8 +15,9 @@ def add(dic, arr):
 def dfs(dic, num):
     dash = "-" * num
     for key in sorted(dic.keys()):
-        print(dash+key)
-        dfs(dic[key], num+2)
+        print(dash + key)
+        dfs(dic[key], num + 2)
+
 
 for _ in range(N):
     list1 = sys.stdin.readline().split()[1:]

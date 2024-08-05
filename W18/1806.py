@@ -1,5 +1,6 @@
 import sys
-N, S = map(int,sys.stdin.readline().split())
+
+N, S = map(int, sys.stdin.readline().split())
 num = list(map(int, sys.stdin.readline().split()))
 
 start, end = 0, 0
@@ -12,7 +13,7 @@ while True:
             break
         sum_ += num[end]
     else:
-        ans = min(ans, end-start+1)
+        ans = min(ans, end - start + 1)
         sum_ -= num[start]
         if start == end:
             end += 1

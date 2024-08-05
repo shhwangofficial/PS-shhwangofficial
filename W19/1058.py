@@ -1,9 +1,10 @@
 import sys
+
 N = int(sys.stdin.readline())
 INF = 10**8
-graph = [[INF]*(N) for i in range(N)]
+graph = [[INF] * (N) for i in range(N)]
 for i in range(N):
-    num = list(map(str,sys.stdin.readline().rstrip()))
+    num = list(map(str, sys.stdin.readline().rstrip()))
     for j in range(len(num)):
         if num[j] == "Y":
             graph[i][j] = 1
@@ -21,6 +22,6 @@ for i in range(len(graph)):
     temp = 0
     for j in range(len(graph[i])):
         if 1 <= graph[i][j] <= 2:
-            temp+=1
-    max_ = max(max_,temp)
+            temp += 1
+    max_ = max(max_, temp)
 print(max_)

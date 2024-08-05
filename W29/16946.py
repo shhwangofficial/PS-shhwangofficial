@@ -1,6 +1,7 @@
 import sys
 from collections import deque
-row, col = map(int,sys.stdin.readline().split())
+
+row, col = map(int, sys.stdin.readline().split())
 board = []
 visited = []
 connected = []
@@ -28,7 +29,12 @@ for i in range(row):
                 for k in range(4):
                     nx = now[0] + dx[k]
                     ny = now[1] + dy[k]
-                    if 0<=nx<row and 0<=ny<col and board[nx][ny] == 0 and visited[nx][ny] == 0:
+                    if (
+                        0 <= nx < row
+                        and 0 <= ny < col
+                        and board[nx][ny] == 0
+                        and visited[nx][ny] == 0
+                    ):
                         queue.append([nx, ny])
                         visited[nx][ny] = 1
                         conn += 1
@@ -38,13 +44,17 @@ for i in range(row):
                 for k in range(4):
                     nx = now[0] + dx[k]
                     ny = now[1] + dy[k]
-                    if 0<=nx<row and 0<=ny<col and board[nx][ny] >= 1 and visited[nx][ny] < visited_checker:
+                    if (
+                        0 <= nx < row
+                        and 0 <= ny < col
+                        and board[nx][ny] >= 1
+                        and visited[nx][ny] < visited_checker
+                    ):
                         board[nx][ny] += conn
                         visited[nx][ny] = visited_checker
-                        
 
 
 for i in range(row):
     for j in range(col):
-        print(board[i][j]%10, end = '')
+        print(board[i][j] % 10, end="")
     print()

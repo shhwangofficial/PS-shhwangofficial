@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 
 mydict = {}
@@ -21,6 +22,4 @@ for code in lst:
         if mydict.get(reverse, 0):
             cnt += mydict[reverse]
 
-print(cnt//2)
-        
-
+print(cnt // 2)

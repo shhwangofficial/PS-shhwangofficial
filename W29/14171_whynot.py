@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/board/view/146355 에 의하여 오류
 import sys
+
 N = int(sys.stdin.readline())
 
 mydict = {}
@@ -14,7 +15,6 @@ for i in range(N):
     if not mydict.get(state_code, 0):
         mydict[state_code] = set()
 
-    
     if city_code != state_code:
         for j in mydict[city_code]:
             if j[:2] == state_code:
@@ -22,5 +22,3 @@ for i in range(N):
         mydict[state_code].add(city)
 
 print(cnt)
-        
-

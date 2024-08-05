@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+
 N = int(sys.stdin.readline())
 board = []
 
@@ -14,8 +15,8 @@ for i in range(N):
                 break
     board.append(row)
 
-dx = [1,-1,0,0]
-dy = [0,0,1,-1]
+dx = [1, -1, 0, 0]
+dy = [0, 0, 1, -1]
 
 shark_size = 2
 caught = 0
@@ -29,15 +30,19 @@ while True:
     while queue:
         now_x, now_y, now_d = queue.popleft()
         if 0 < board[now_x][now_y] < shark_size:
-            cands.append([now_x,now_y,now_d])
+            cands.append([now_x, now_y, now_d])
             continue
         for i in range(4):
             new_x = now_x + dx[i]
             new_y = now_y + dy[i]
-            if 0<=new_x<N and 0<=new_y<N and visited[new_x][new_y] == 0 and \
-                board[new_x][new_y] <= shark_size:
+            if (
+                0 <= new_x < N
+                and 0 <= new_y < N
+                and visited[new_x][new_y] == 0
+                and board[new_x][new_y] <= shark_size
+            ):
                 visited[new_x][new_y] = 1
-                queue.append([new_x, new_y, now_d+1])
+                queue.append([new_x, new_y, now_d + 1])
     if cands:
         board[shark_x][shark_y] = 0
         cands.sort(key=lambda x: (x[2], x[0], x[1]))
@@ -52,6 +57,3 @@ while True:
         break
 
 print(time)
-
-
-

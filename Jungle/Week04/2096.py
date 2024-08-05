@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 max_list = [0, 0, 0]
 min_list = [0, 0, 0]

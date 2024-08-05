@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 dict_ = {}
 for _ in range(N):

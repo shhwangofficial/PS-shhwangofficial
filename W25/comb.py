@@ -9,9 +9,8 @@ while True:
         if len(arr) == max_num:
             print(*arr)
             return
-        for i in range(idx+1, len(num)):
-            comb(arr+[num[i]], i)
+        for i in range(idx + 1, len(num)):
+            comb(arr + [num[i]], i)
 
     comb([], -1)
     print()
-

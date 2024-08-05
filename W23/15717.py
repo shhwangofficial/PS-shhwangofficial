@@ -4,6 +4,7 @@ if N == 0:
     print(1)
     exit()
 
+
 def custom_pow(base, exp, mod):
     result = 1
     base = base % mod
@@ -15,4 +16,5 @@ def custom_pow(base, exp, mod):
         exp //= 2
     return result
 
-print(custom_pow(2, N-1, c))  
+
+print(custom_pow(2, N - 1, c))

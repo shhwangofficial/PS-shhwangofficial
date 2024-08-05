@@ -1,5 +1,6 @@
 import sys
-N, M, K = map(int,sys.stdin.readline().split())
+
+N, M, K = map(int, sys.stdin.readline().split())
 infected = set(list(map(int, sys.stdin.readline().split())))
 graph = []
 for i in range(M):
@@ -13,4 +14,3 @@ for suspect in infected:
     if sus == infected:
         print(suspect)
         exit()
-

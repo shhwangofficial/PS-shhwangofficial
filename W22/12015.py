@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 nums = list(map(int, sys.stdin.readline().split()))
 my_list = [0]
@@ -10,7 +11,7 @@ for num in nums:
         my_list[1] = num
     else:
         left = 0
-        right = len(my_list)-1
+        right = len(my_list) - 1
         while left <= right:
             mid = (left + right) // 2
             if my_list[mid] < num:
@@ -19,4 +20,4 @@ for num in nums:
                 idx = mid
                 right = mid - 1
         my_list[idx] = num
-print(len(my_list)-1)
+print(len(my_list) - 1)

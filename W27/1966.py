@@ -3,7 +3,7 @@ from collections import deque
 
 T = int(sys.stdin.readline())
 for _ in range(T):
-    n, idx = map(int,sys.stdin.readline().split())
+    n, idx = map(int, sys.stdin.readline().split())
     importance = list(map(int, sys.stdin.readline().split()))
     nums = deque([])
     for i in range(n):

@@ -1,9 +1,11 @@
 import sys
-N, M, K = map(int,sys.stdin.readline().split())
+
+N, M, K = map(int, sys.stdin.readline().split())
 
 num = [0] + list(map(int, sys.stdin.readline().split()))
 
-root = [i for i in range(N+1)]
+root = [i for i in range(N + 1)]
+
 
 def union(v1, v2):
     r1 = find_root(v1)
@@ -14,16 +16,18 @@ def union(v1, v2):
     else:
         root[r1] = r2
 
+
 def find_root(v1):
     while v1 != root[v1]:
         v1 = root[v1]
-        
+
     return v1
 
+
 for i in range(M):
-    a, b = map(int,sys.stdin.readline().split())
+    a, b = map(int, sys.stdin.readline().split())
     union(a, b)
-    
+
 for i in range(1, len(num)):
     root[i] = root[root[i]]
 
@@ -35,7 +39,7 @@ for i in range(1, len(num)):
 
 dp = [0] * K
 for key in kids.keys():
-    for i in range(K-1, kids[key]-1, -1):
-        dp[i] = max(dp[i-kids[key]] + candies[key], dp[i])
+    for i in range(K - 1, kids[key] - 1, -1):
+        dp[i] = max(dp[i - kids[key]] + candies[key], dp[i])
 
 print(max(dp))

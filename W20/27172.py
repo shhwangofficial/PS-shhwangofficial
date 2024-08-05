@@ -1,4 +1,5 @@
 import sys
+
 n = int(sys.stdin.readline())
 cards = list(map(int, sys.stdin.readline().split()))
 
@@ -9,13 +10,12 @@ res = [0] * n
 
 for i in range(n):
     cur_card = cards[i]
-    for j in range(cur_card*2, max_card+1, cur_card):
+    for j in range(cur_card * 2, max_card + 1, cur_card):
         if j in cards_w_idx:
             res[i] += 1
             res[cards_w_idx[j]] -= 1
 
 print(*res)
-
 
 
 # import sys

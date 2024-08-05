@@ -1,16 +1,17 @@
+import heapq
 import sys
-import heapq 
+
 no_cities = int(sys.stdin.readline())
 no_lines = int(sys.stdin.readline())
-graph = [[] for _ in range(no_cities+1)]
-path = [0 for _ in range(no_cities+1)]
+graph = [[] for _ in range(no_cities + 1)]
+path = [0 for _ in range(no_cities + 1)]
 for _ in range(no_lines):
-    at, to, c = map(int,sys.stdin.readline().split())
+    at, to, c = map(int, sys.stdin.readline().split())
     graph[at].append([c, to])
 
-start, end = map(int,sys.stdin.readline().split())
+start, end = map(int, sys.stdin.readline().split())
 inf = 10**8
-min_dist = [inf for i in range(no_cities+1)]
+min_dist = [inf for i in range(no_cities + 1)]
 min_dist[start] = 0
 heap = [[0, start]]
 while heap:
@@ -32,5 +33,5 @@ while path[spot] != start:
 res.reverse()
 
 print(min_dist[end])
-print(2+len(res))
+print(2 + len(res))
 print(start, *res, end)

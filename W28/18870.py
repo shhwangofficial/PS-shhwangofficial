@@ -1,4 +1,5 @@
 import sys
+
 N = int(sys.stdin.readline())
 
 # 1 10 4 9  -> [1, 10, 4, 9]
@@ -10,4 +11,4 @@ dict_ = {}
 for i, val in enumerate(set_):
     dict_[val] = i
 for n in num:
-    print(dict_[n], end = ' ')
+    print(dict_[n], end=" ")

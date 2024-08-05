@@ -3,12 +3,7 @@ import sys
 N = int(sys.stdin.readline())
 
 # 1 10  -> a = 1, b = 10
-import sys
-
 a, b = map(int, sys.stdin.readline().split())
-
-# 
-import sys
 
 string = sys.stdin.readline().rstrip()
 
@@ -29,6 +24,7 @@ import itertools
 nCr = list(itertools.combinations(num_list, 3))
 # -> [(), (), ...]
 
+#
 import copy
 
 b = copy.deepcopy(a)

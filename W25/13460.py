@@ -34,9 +34,7 @@ def turn(direction, red, blue):
         if next_red == "#":
             break
         if [red[0] + direct[direction][0], red[1] + direct[direction][1]] == blue:
-            next_blue = board[blue[0] + direct[direction][0]][
-                blue[1] + direct[direction][1]
-            ]
+            next_blue = board[blue[0] + direct[direction][0]][blue[1] + direct[direction][1]]
             if next_blue == "O":
                 return ["End", red, blue]
             elif next_blue == ".":
@@ -52,9 +50,7 @@ def turn(direction, red, blue):
             red = [red[0] + direct[direction][0], red[1] + direct[direction][1]]
 
     while True:
-        next_blue = board[blue[0] + direct[direction][0]][
-            blue[1] + direct[direction][1]
-        ]
+        next_blue = board[blue[0] + direct[direction][0]][blue[1] + direct[direction][1]]
         if next_blue == "#":
             break
         elif next_blue == "O":

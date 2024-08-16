@@ -36,9 +36,7 @@ def update_tree(idx, start=0, end=N - 1, idx_tree=1):
     elif mid < idx <= end:
         update_tree(idx, mid + 1, end, 2 * idx_tree + 1)
     tree[idx_tree] = (
-        tree[2 * idx_tree]
-        if num[tree[2 * idx_tree]] <= num[tree[2 * idx_tree + 1]]
-        else tree[2 * idx_tree + 1]
+        tree[2 * idx_tree] if num[tree[2 * idx_tree]] <= num[tree[2 * idx_tree + 1]] else tree[2 * idx_tree + 1]
     )
 
 

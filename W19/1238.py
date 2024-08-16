@@ -25,9 +25,7 @@ def dijkstra(start, end):
             for i in range(len(graph[now[1]])):
                 if min_dist[graph[now[1]][i][0]] > now[0] + graph[now[1]][i][1]:
                     min_dist[graph[now[1]][i][0]] = now[0] + graph[now[1]][i][1]
-                    heapq.heappush(
-                        heap, [min_dist[graph[now[1]][i][0]], graph[now[1]][i][0]]
-                    )
+                    heapq.heappush(heap, [min_dist[graph[now[1]][i][0]], graph[now[1]][i][0]])
 
 
 max_ = 0

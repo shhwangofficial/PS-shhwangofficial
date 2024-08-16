@@ -46,12 +46,7 @@ while queue:
     for k in range(4):
         nx = x + dx[k]
         ny = y + dy[k]
-        if (
-            0 <= nx < r
-            and 0 <= ny < c
-            and marking[nx][ny] != 0
-            and board[nx][ny] < board[x][y]
-        ):
+        if 0 <= nx < r and 0 <= ny < c and marking[nx][ny] != 0 and board[nx][ny] < board[x][y]:
             dp[nx][ny] += dp[x][y]
             visited[nx][ny] += 1
             if visited[nx][ny] == marking[nx][ny]:

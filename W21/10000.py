@@ -19,9 +19,7 @@ for [position, type_] in arch_list:
         stack_layer.append(0)
     else:  # )
         area += 1
-        if (
-            stack_layer.pop() == 0 and position == prev
-        ):  # 끊기지 않고 온전히 왔다면 area 하나 더
+        if stack_layer.pop() == 0 and position == prev:  # 끊기지 않고 온전히 왔다면 area 하나 더
             area += 1
     prev = position
 

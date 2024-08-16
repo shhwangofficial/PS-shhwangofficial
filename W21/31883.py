@@ -9,17 +9,11 @@ cur_time = 0
 cur_time += min(time_passing[0][0], time_passing[0][1])
 for i in range(1, len(time_passing)):
 
-    green_light = (
-        0 <= cur_time % (time_passing[i][2] + time_passing[i][3]) < time_passing[i][2]
-    )
+    green_light = 0 <= cur_time % (time_passing[i][2] + time_passing[i][3]) < time_passing[i][2]
     if green_light:
         cur_time += min(time_passing[i][0], time_passing[i][1])
     else:
-        remain_time = (
-            time_passing[i][2]
-            + time_passing[i][3]
-            - (cur_time % (time_passing[i][2] + time_passing[i][3]))
-        )
+        remain_time = time_passing[i][2] + time_passing[i][3] - (cur_time % (time_passing[i][2] + time_passing[i][3]))
         cur_time += min(time_passing[i][0] + remain_time, time_passing[i][1])
 
 

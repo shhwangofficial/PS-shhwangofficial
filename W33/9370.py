@@ -64,8 +64,6 @@ for _ in range(T):
 
     ans = []
     for i in cands:
-        if (min_dist[g] + min_dist2[i] + g_h == min_dist[i]) or (
-            min_dist[h] + min_dist3[i] + g_h == min_dist[i]
-        ):
+        if (min_dist[g] + min_dist2[i] + g_h == min_dist[i]) or (min_dist[h] + min_dist3[i] + g_h == min_dist[i]):
             ans.append(i)
     print(*sorted(ans))

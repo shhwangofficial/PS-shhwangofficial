@@ -35,12 +35,7 @@ while True:
         for i in range(4):
             new_x = now_x + dx[i]
             new_y = now_y + dy[i]
-            if (
-                0 <= new_x < N
-                and 0 <= new_y < N
-                and visited[new_x][new_y] == 0
-                and board[new_x][new_y] <= shark_size
-            ):
+            if 0 <= new_x < N and 0 <= new_y < N and visited[new_x][new_y] == 0 and board[new_x][new_y] <= shark_size:
                 visited[new_x][new_y] = 1
                 queue.append([new_x, new_y, now_d + 1])
     if cands:

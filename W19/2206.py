@@ -40,9 +40,7 @@ while queue:
                         queue.append([new_x, new_y, now[2], new_dist])
             else:  # 한번 벽을 뚫고 왔다면
                 if graph[new_x][new_y] == 0:  # 벽이 아니어야하고
-                    if (
-                        visited_broken[new_x][new_y] == 0
-                    ):  # 벽은 뚫은 채로 방문한 적이 없어야함
+                    if visited_broken[new_x][new_y] == 0:  # 벽은 뚫은 채로 방문한 적이 없어야함
                         visited_broken[new_x][new_y] = 1
                         queue.append([new_x, new_y, now[2], new_dist])
 

@@ -7,9 +7,7 @@ dp = [[-1] * ((1 << N) + 1) for _ in range(N)]
 
 
 def dist(A, B):
-    return ((coord[A][0] - coord[B][0]) ** 2 + (coord[A][1] - coord[B][1]) ** 2) ** (
-        1 / 2
-    )
+    return ((coord[A][0] - coord[B][0]) ** 2 + (coord[A][1] - coord[B][1]) ** 2) ** (1 / 2)
 
 
 def DFS(now, visited):

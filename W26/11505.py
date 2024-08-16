@@ -17,11 +17,7 @@ def making_tree(start, end, val):
         tree[val] = lst[start] % mod
         return tree[val]
     new_end = (start + end) // 2
-    tree[val] = (
-        making_tree(start, new_end, 2 * val)
-        * making_tree(new_end + 1, end, 2 * val + 1)
-        % mod
-    )
+    tree[val] = making_tree(start, new_end, 2 * val) * making_tree(new_end + 1, end, 2 * val + 1) % mod
     return tree[val]
 
 
@@ -31,15 +27,9 @@ def update_tree(start, end, idx, val, to_val):
         return tree[val]
     new_end = (start + end) // 2
     if idx <= new_end:
-        tree[val] = (
-            update_tree(start, new_end, idx, 2 * val, to_val) * tree[2 * val + 1] % mod
-        )
+        tree[val] = update_tree(start, new_end, idx, 2 * val, to_val) * tree[2 * val + 1] % mod
     else:
-        tree[val] = (
-            tree[2 * val]
-            * update_tree(new_end + 1, end, idx, 2 * val + 1, to_val)
-            % mod
-        )
+        tree[val] = tree[2 * val] * update_tree(new_end + 1, end, idx, 2 * val + 1, to_val) % mod
     return tree[val]
 
 

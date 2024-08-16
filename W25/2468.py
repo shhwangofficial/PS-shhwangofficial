@@ -26,10 +26,7 @@ for height in heights:
                         new_x = now[0] + dx[k]
                         new_y = now[1] + dy[k]
                         if 0 <= new_x < N and 0 <= new_y < N:
-                            if (
-                                board[new_x][new_y] > height
-                                and visited[new_x][new_y] == 0
-                            ):
+                            if board[new_x][new_y] > height and visited[new_x][new_y] == 0:
                                 visited[new_x][new_y] = 1
                                 queue.append([new_x, new_y])
     if island > max_island:

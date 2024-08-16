@@ -16,9 +16,7 @@ def making_tree(start, end, now):
         return tree[now]
 
     new_end = (start + end) // 2
-    tree[now] = making_tree(start, new_end, now * 2) + making_tree(
-        new_end + 1, end, now * 2 + 1
-    )
+    tree[now] = making_tree(start, new_end, now * 2) + making_tree(new_end + 1, end, now * 2 + 1)
     return tree[now]
 
 
@@ -32,9 +30,7 @@ def query_sum(start, end, left, right, idx):
     elif mid + 1 <= left:
         return query_sum(mid + 1, end, left, right, idx * 2 + 1)
     else:
-        return query_sum(start, mid, left, mid, idx * 2) + query_sum(
-            mid + 1, end, mid + 1, right, idx * 2 + 1
-        )
+        return query_sum(start, mid, left, mid, idx * 2) + query_sum(mid + 1, end, mid + 1, right, idx * 2 + 1)
 
 
 def update(start, end, idx, val, idx_of_tree):

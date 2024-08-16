@@ -15,10 +15,5 @@ for i in range(1, N + 1):
 
 for _ in range(M):
     num = list(map(int, sys.stdin.readline().split()))
-    calc = (
-        dp[num[2]][num[3]]
-        - dp[num[0] - 1][num[3]]
-        - dp[num[2]][num[1] - 1]
-        + dp[num[0] - 1][num[1] - 1]
-    )
+    calc = dp[num[2]][num[3]] - dp[num[0] - 1][num[3]] - dp[num[2]][num[1] - 1] + dp[num[0] - 1][num[1] - 1]
     print(calc)

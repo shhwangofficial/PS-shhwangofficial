@@ -28,13 +28,7 @@ while queue:
         if r + 1 < N and board[r + 1][c] == 0:
             queue.append((r + 1, c, 2))
 
-    if (
-        c + 1 <= N
-        and r + 1 <= N
-        and not board[r + 1][c + 1]
-        and not board[r][c + 1]
-        and not board[r + 1][c]
-    ):
+    if c + 1 <= N and r + 1 <= N and not board[r + 1][c + 1] and not board[r][c + 1] and not board[r + 1][c]:
         if r + 1 == N and c + 1 == N:
             arrive += 1
             continue

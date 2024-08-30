@@ -11,9 +11,9 @@ for num in nums:
         lst[0] = num
     else:
         start = 0
-        end = len(lst)-1
+        end = len(lst) - 1
         while start <= end:
-            mid = (start+end)//2
+            mid = (start + end) // 2
             if lst[mid] >= num:
                 temp = mid
                 end = mid - 1

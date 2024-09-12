@@ -1,5 +1,5 @@
 // 'js_testcase.txt'
-// /dev/stdin
+// 0, 'utf-8'
 
 // readFileSync(0, 'utf-8')
 
@@ -7,11 +7,11 @@
 // console.log 는 한번만 실행되게끔 한다.
 
 // N
-let N = Number(require("fs").readFileSync("/dev/stdin").toString().trim());
+let N = Number(require("fs").readFileSync(0, 'utf-8').toString().trim());
 
 // 1 10  -> a = 1, b = 10
 let input1 = require("fs")
-  .readFileSync("/dev/stdin")
+  .readFileSync(0, 'utf-8')
   .toString()
   .trim()
   .split(" ");
@@ -19,7 +19,7 @@ let [a, b] = input1.map(Number);
 
 // 여러줄의 숫자 입력 받을 때
 let input2 = require("fs")
-  .readFileSync("/dev/stdin")
+  .readFileSync(0, 'utf-8')
   .toString()
   .trim()
   .split("\n");
@@ -30,7 +30,7 @@ let input2 = require("fs")
 110 78 158
 */
 const [n, input3] = require("fs")
-  .readFileSync("/dev/stdin")
+  .readFileSync(0, 'utf-8')
   .toString()
   .trim()
   .split("\n");

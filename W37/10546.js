@@ -1,8 +1,8 @@
-let input = require("fs")
-  .readFileSync(0, "utf-8")
+let input = require('fs')
+  .readFileSync(0, 'utf-8')
   .toString()
   .trim()
-  .split("\n");
+  .split('\n');
 let [N, ...names] = input;
 N = parseInt(N);
 names = names.map((name) => name.trim());

@@ -1,6 +1,6 @@
-let input1 = require("fs")
-  .readFileSync("js_testcase.txt")
+let input1 = require('fs')
+  .readFileSync('js_testcase.txt')
   .toString()
-  .split(" ");
+  .split(' ');
 let [A, B] = input1.map((num) => Number(num));
 console.log(A - B);

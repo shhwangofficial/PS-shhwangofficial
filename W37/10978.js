@@ -1,8 +1,8 @@
-let input = require("fs")
+let input = require('fs')
   .readFileSync(0, 'utf-8')
   .toString()
   .trim()
-  .split("\n");
+  .split('\n');
 
 let T = parseInt(input[0]); // 첫 번째 줄: 테스트 케이스 개수
 const ans = [];
@@ -22,4 +22,4 @@ for (let i = 1; i <= T; i++) {
     ans.push(b);
   }
 }
-console.log(ans.join("\n"));
+console.log(ans.join('\n'));

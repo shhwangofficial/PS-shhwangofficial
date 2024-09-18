@@ -1,4 +1,4 @@
-let input1 = require("fs").readFileSync("/dev/stdin").toString().split(" ");
+let input1 = require('fs').readFileSync('/dev/stdin').toString().split(' ');
 let [a, b] = input1.map(Number);
 
 let M = (b - a) / 400;

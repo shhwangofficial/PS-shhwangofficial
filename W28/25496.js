@@ -1,10 +1,10 @@
-let [PN, An] = require("fs")
-  .readFileSync("/dev/stdin")
+let [PN, An] = require('fs')
+  .readFileSync('/dev/stdin')
   .toString()
   .trim()
-  .split("\n");
-let [P, N] = PN.split(" ").map(Number);
-let A = An.split(" ").map(Number);
+  .split('\n');
+let [P, N] = PN.split(' ').map(Number);
+let A = An.split(' ').map(Number);
 
 A.sort(function (a, b) {
   return a - b;

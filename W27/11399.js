@@ -1,9 +1,9 @@
-const [N, input3] = require("fs")
-  .readFileSync("/dev/stdin")
+const [N, input3] = require('fs')
+  .readFileSync('/dev/stdin')
   .toString()
   .trim()
-  .split("\n");
-const nums = input3.trim().split(" ");
+  .split('\n');
+const nums = input3.trim().split(' ');
 
 for (let i = 0; i < nums.length; i++) {
   nums[i] = Number(nums[i]);

@@ -1,7 +1,7 @@
-let input2 = require("fs")
-  .readFileSync("js_testcase.txt")
+let input2 = require('fs')
+  .readFileSync('js_testcase.txt')
   .toString()
-  .split("\n")
+  .split('\n')
   .map(Number);
 
 const board = [];

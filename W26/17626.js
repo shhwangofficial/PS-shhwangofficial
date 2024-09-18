@@ -1,6 +1,6 @@
 // 'js_testcase.txt'
 // /dev/stdin
-let input = require("fs").readFileSync("/dev/stdin").toString();
+let input = require('fs').readFileSync('/dev/stdin').toString();
 let N = Number(input);
 
 let dp = Array(N + 1).fill(0);

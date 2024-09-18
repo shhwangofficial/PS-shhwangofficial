@@ -1,9 +1,9 @@
 const filePath = process.platform === 'linux' ? 0 : 'js_testcase.txt';
-let input = require("fs")
+let input = require('fs')
   .readFileSync(filePath, 'utf-8')
   .toString()
   .trim()
-  .split("\n");
+  .split('\n');
 
 let [len, ...op] = input;
 len = Number(len);

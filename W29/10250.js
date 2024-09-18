@@ -1,13 +1,13 @@
-const [n, ...input3] = require("fs")
-  .readFileSync("js_testcase.txt")
+const [n, ...input3] = require('fs')
+  .readFileSync('js_testcase.txt')
   .toString()
   .trim()
-  .split("\n");
+  .split('\n');
 
 for (let list of input3) {
   const test = list
     .trim()
-    .split(" ")
+    .split(' ')
     .map((num) => Number(num));
   let floor = test[2] % test[0];
   let block;

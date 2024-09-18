@@ -1,10 +1,10 @@
-const [N, c, M, q] = require("fs")
-  .readFileSync("BOJ/js_testcase.txt")
+const [N, c, M, q] = require('fs')
+  .readFileSync('BOJ/js_testcase.txt')
   .toString()
   .trim()
-  .split("\n");
-const cards = c.split(" ").map(Number);
-const querys = q.split(" ").map(Number);
+  .split('\n');
+const cards = c.split(' ').map(Number);
+const querys = q.split(' ').map(Number);
 dict = {};
 
 for (let i = 0; i < N; i++) {
@@ -23,4 +23,4 @@ for (let j = 0; j < M; j++) {
   }
 }
 
-console.log(ans.join(" "));
+console.log(ans.join(' '));

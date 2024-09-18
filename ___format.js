@@ -2,14 +2,14 @@
 // console.log 는 한번만 실행되게끔 한다.
 
 // 필수
-const filePath = process.platform === 'linux' ? 0 : 'js_testcase.txt';
+const filePath = process.platform === "linux" ? 0 : "js_testcase.txt";
 
 // N
-let N = Number(require("fs").readFileSync(filePath, 'utf-8').toString().trim());
+let N = Number(require("fs").readFileSync(filePath, "utf-8").toString().trim());
 
 // 1 10  -> a = 1, b = 10
 let input1 = require("fs")
-  .readFileSync(filePath, 'utf-8')
+  .readFileSync(filePath, "utf-8")
   .toString()
   .trim()
   .split(" ");
@@ -17,7 +17,7 @@ let [a, b] = input1.map(Number);
 
 // 여러줄의 숫자 입력 받을 때
 let input2 = require("fs")
-  .readFileSync(filePath, 'utf-8')
+  .readFileSync(filePath, "utf-8")
   .toString()
   .trim()
   .split("\n");
@@ -29,12 +29,11 @@ input2 = input2.map(Number);
 110 78 158
 */
 const [n, input3] = require("fs")
-  .readFileSync(filePath, 'utf-8')
+  .readFileSync(filePath, "utf-8")
   .toString()
   .trim()
   .split("\n");
 const inputArr3 = input3.split(" ").map(Number);
-
 
 // N개의 0으로 된 일차원 배열
 let dp = Array(N).fill(0);

@@ -1,6 +1,6 @@
 # BOJ-2024
 
-This repository contains my solutions to problems from the [Baekjoon Online Judge (BOJ)](https://www.acmicpc.net/). I aim to solve one problem each day and upload the code here.
+This repository contains my solutions to problems from the [Baekjoon Online Judge (BOJ)](https://www.acmicpc.net/). I aim to solve at least one problem each day and upload the code here.
 
 ## Structure
 

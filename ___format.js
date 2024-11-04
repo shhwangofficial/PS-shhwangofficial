@@ -38,6 +38,9 @@ const inputArr3 = input3.split(' ').map(Number);
 // N개의 0으로 된 일차원 배열
 let dp = Array(N).fill(0);
 
+// 이차원 배열
+arr = Array.from({ length: rows }, () => Array(cols).fill(0));
+
 // 배열 오름차순 정렬
 arr.sort(function (a, b) {
   return a - b;

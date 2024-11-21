@@ -32,7 +32,7 @@ def backtrack(camera, visited):
                 if visited[r][c]:
                     ret += 1
         return ret
-    
+
     temp = 0
     for i in d[cameras[camera][2]]:
         temp_visited = copy.deepcopy(visited)

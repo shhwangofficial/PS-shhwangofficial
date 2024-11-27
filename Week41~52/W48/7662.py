@@ -45,5 +45,5 @@ for _ in range(T):
     else:
         print("EMPTY")
         continue
-    
+
     print(max_, min_)

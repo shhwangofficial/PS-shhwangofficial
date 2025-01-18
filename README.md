@@ -1,10 +1,10 @@
-# BOJ-2024
+# BOJ-shhwangofficial
 
-This repository contains my solutions to problems from the [Baekjoon Online Judge (BOJ)](https://www.acmicpc.net/). I aim to solve at least one problem each day and upload the code here.
+This repository contains my solutions to problems from the [Baekjoon Online Judge (BOJ)](https://www.acmicpc.net/). 
 
 ## Structure
 
-- Each solution is organized by the week of 2024 it was solved.
+- Each solution is organized by the year and the week it was solved.
 - The file names correspond to the problem number for easy reference.
 
 ## How to Use

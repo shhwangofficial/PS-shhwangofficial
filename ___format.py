@@ -1,23 +1,25 @@
 import sys
+sys.stdin = open("python_input.txt", "r")
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline())
+N = int(input())
 
 # 1 10  -> a = 1, b = 10
-a, b = map(int, sys.stdin.readline().split())
+a, b = map(int, input().split())
 
 # rstrip = rightstrip
-string = sys.stdin.readline().rstrip()
+string = input().rstrip()
 
 # str str -> ["str", "str"]
-list1 = sys.stdin.readline().split()
+list1 = input().split()
 
 sys.setrecursionlimit(10**7)
 
 # 1 10 4 9  -> [1, 10, 4, 9]
-num = list(map(int, sys.stdin.readline().split()))
+num = list(map(int, input().split()))
 
 # 110110 -> [1, 1, 0, 1, 1, 0]
-num_list = list(map(int, sys.stdin.readline().rstrip()))
+num_list = list(map(int, input().rstrip()))
 
 
 import itertools

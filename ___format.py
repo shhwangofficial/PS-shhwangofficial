@@ -1,14 +1,11 @@
 import sys
 sys.stdin = open("python_input.txt", "r")
-input = sys.stdin.readline
+input = lambda: sys.stdin.readline().rstrip()
 
 N = int(input())
 
 # 1 10  -> a = 1, b = 10
 a, b = map(int, input().split())
-
-# rstrip = rightstrip
-string = input().rstrip()
 
 # str str -> ["str", "str"]
 list1 = input().split()
@@ -19,7 +16,7 @@ sys.setrecursionlimit(10**7)
 num = list(map(int, input().split()))
 
 # 110110 -> [1, 1, 0, 1, 1, 0]
-num_list = list(map(int, input().rstrip()))
+num_list = list(map(int, input()))
 
 
 import itertools

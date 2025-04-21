@@ -9,7 +9,7 @@ N = int(input())
 # 1 10  -> a = 1, b = 10
 a, b = map(int, input().split())
 
-# str str -> ["str", "str"]
+# str1 str2 -> ["str1", "str2"]
 list1 = input().split()
 
 sys.setrecursionlimit(10**7)
@@ -24,6 +24,7 @@ num_list = list(map(int, input()))
 import itertools
 
 nCr = list(itertools.combinations(num_list, N))
+nPr = list(itertools.permutations(num_list, N))
 # -> [(), (), ...]
 
 
@@ -32,7 +33,7 @@ import copy
 copied_list = copy.deepcopy(list1)
 
 
-# 입력이 있을때까지 받기
+# 입력이 있을 때까지 받기
 while True:
     try:
         line = input()

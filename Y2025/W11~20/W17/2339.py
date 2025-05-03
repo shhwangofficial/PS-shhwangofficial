@@ -25,7 +25,7 @@ def divide_conquer(board, prev):
         return 0
     if len(gems) == 1 and len(defects) == 0:
         return 1
-    
+
     ret = 0
     for dr, dc in defects:
         if prev != 1:

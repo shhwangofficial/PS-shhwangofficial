@@ -13,25 +13,24 @@ for i in range(1, N + 1):
     s, h, e = map(int, input().split())
     spots.append((s, i, 1))
     spots.append((e, i, 0))
-    find_end[i] = (-h, e)
+    find_end[i] = (h, e)
 
-spots.sort(key=lambda x: (x[0], -x[2], find_end[x[1]][0]))
+spots.sort(key=lambda x: (x[0], -x[2], -find_end[x[1]][0]))
 
 ans = []
 now = 0
 heap = []
-check = set()
 for x, i, is_start in spots:
     if is_start:
-        if now < -find_end[i][0]:
-            ans.append((x, -find_end[i][0]))
-            now = -find_end[i][0]
-        heapq.heappush(heap, find_end[i])
+        h, e = find_end[i]
+        if now < h:
+            ans.append((x, h))
+            now = h
+        heapq.heappush(heap, (-h, e))
 
     else:  # 끝점
-        check.add(x)
         while heap:
-            if heap[0][1] not in check:
+            if heap[0][1] > x:
                 break
             heapq.heappop(heap)
         if not heap:

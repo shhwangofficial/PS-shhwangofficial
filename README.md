@@ -1,13 +1,13 @@
 # Algorithm Solutions Repository
 
-이 저장소는 다양한 온라인 코딩 플랫폼의 알고리즘 문제 솔루션을 포함합니다.
+이 저장소는 다양한 온라인 코딩 플랫폼의 알고리즘 문제 솔루션을 저장합니다.
 
 ## 포함된 플랫폼
 
 - **BOJ**: [Baekjoon Online Judge](https://www.acmicpc.net/) 솔루션
-- **Programmers**: [프로그래머스](https://programmers.co.kr/) 솔루션 (추후 추가 예정)
-- **LeetCode**: [LeetCode](https://leetcode.com/) 솔루션 (추후 추가 예정)
-- **Codeforces**: [Codeforces](https://codeforces.com/) 솔루션 (추후 추가 예정)
+- **Programmers**: [프로그래머스](https://programmers.co.kr/) 솔루션
+- **LeetCode**: [LeetCode](https://leetcode.com/) 솔루션 
+- **Codeforces**: [Codeforces](https://codeforces.com/) 솔루션
 
 ## 파일 명명 규칙
 

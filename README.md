@@ -1,37 +1,38 @@
-# Algorithm Solutions Repository
+# Problem Solving Solutions Repository
 
-이 저장소는 다양한 온라인 코딩 플랫폼의 알고리즘 문제 솔루션을 저장합니다.
+This repository stores algorithm problem solutions from various online coding platforms solved by shhwangofficial.
 
-## 포함된 플랫폼
+## Included Platforms
 
-- **BOJ**: [Baekjoon Online Judge](https://www.acmicpc.net/) 솔루션
-- **Programmers**: [프로그래머스](https://programmers.co.kr/) 솔루션
-- **LeetCode**: [LeetCode](https://leetcode.com/) 솔루션 
-- **Codeforces**: [Codeforces](https://codeforces.com/) 솔루션
+- [Baekjoon Online Judge](https://www.acmicpc.net/)
+- [programmers](https://programmers.co.kr/)
+- [LeetCode](https://leetcode.com/)
+- [Codeforces](https://codeforces.com/)
+- [SW Expert Academy](https://swexpertacademy.com/) 
 
-## 파일 명명 규칙
+## File Naming Convention
 
-각 플랫폼별로 다음과 같은 접두사를 사용합니다:
+Each platform uses the following prefixes:
 
-- **BOJ**: `BOJ{문제번호}.{확장자}` (예: `BOJ1135.py`, `BOJ10926.java`)
-- **Programmers**: `PRG{문제번호}.{확장자}` (예: `PRG42576.py`)
-- **LeetCode**: `LC{문제번호}.{확장자}` (예: `LC1.py`)
-- **Codeforces**: `CF{문제번호}.{확장자}` (예: `CF1A.py`)
+- **BOJ**: `BOJ{problem_number}.{extension}` (e.g., `BOJ1135.py`, `BOJ10926.java`)
+- **Programmers**: `PRG{problem_number}.{extension}` (e.g., `PRG42576.py`)
+- **LeetCode**: `LC{problem_number}.{extension}` (e.g., `LC1.py`)
+- **Codeforces**: `CF{problem_number}.{extension}` (e.g., `CF1A.py`)
+- **SW Expert Academy**: `SWEA{problem_number}.{extension}` (e.g., `SWEA12.py`)
 
-## 구조
+## Structure
 
-- 각 솔루션은 해결한 연도와 주차별로 정리되어 있습니다.
-- 파일명은 해당 플랫폼의 문제 번호를 참조하여 쉽게 찾을 수 있습니다.
+- Each solution is organized by the year and week it was solved.
+- File names reference the problem numbers from their respective platforms for easy identification.
 
-## 사용법
+## Usage
 
-1. 관심 있는 문제의 솔루션을 저장소에서 찾아보세요.
-2. 코드를 검토하거나 자신의 연습에 참고로 사용하세요.
-3. 각 플랫폼별로 접두사를 확인하여 원하는 문제를 찾으세요.
+1. Find solutions for problems you're interested in from the repository.
+2. Use the code for review or as reference for your own practice.
 
-## 기여
+## Contributing
 
-솔루션 개선이나 제안사항이 있으시면 이슈를 열거나 풀 리퀘스트를 제출해 주세요!
+If you have suggestions for solution improvements or other ideas, please open an issue or submit a pull request!
 
 ---
 
